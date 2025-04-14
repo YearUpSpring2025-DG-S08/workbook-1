@@ -5,21 +5,34 @@ public class Exercise4 {
 
     public static void main(String[] args){
 
-        System.out.println("Welcome to PayrollCalculator.");
+        System.out.println("Welcome to PayrollCalculator."); // Introduces the PayrollCalculator
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("What is your name?");
+        System.out.println("What is your name?"); // Asks User for name
             String name = scanner.nextLine();
 
-        System.out.println("How many hours have you worked?");
+        System.out.println("How many hours have you worked?"); // Asks User for how many hours they worked
             Float hoursWorked = scanner.nextFloat();
 
-        System.out.println("What is your pay rate?");
+        System.out.println("What is your pay rate?"); // Asks User what their pay rate is
             Float payRate = scanner.nextFloat();
 
-        float grossPay = hoursWorked * payRate;
+        double grossPay = hoursWorked * payRate; // Initializes a formula to calculate the gross pay
 
-        System.out.printf("Hello %s, your gross pay is $%.0f", name, grossPay);
+        if (hoursWorked > 40){                   // If statement that will calculate overtime pay
+            double OTP = payRate * 1.4;          // Initializes a formula to calculate overtime pay
+            double OTHours = (hoursWorked - 40) * OTP;      // Initializes a formula to calculate overtime hours
+            // and the amount of pay
+
+
+            System.out.printf("Hello %s, your gross pay is $%.0f and your overtime pay is $%.0f", name, grossPay, OTHours);
+            // Print statement that gives gross pay and the overtime pay
+        }
+        else {
+            System.out.printf("Hello %s, your gross pay is $%.0f", name, grossPay);
+            // Else statement that only prints gross pay if the 'if' statement does not pass true
+        }
+        // System.out.printf("Hello %s, your gross pay is $%.0f", name, grossPay); <-- original print statement
 
 
     }
