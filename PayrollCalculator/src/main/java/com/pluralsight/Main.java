@@ -20,7 +20,7 @@ public class Main {
         double grossPay = hoursWorked * payRate; // Initializes a formula to calculate the gross pay
 
         if (hoursWorked > 40){                   // If statement that will calculate overtime pay
-            double OTP = payRate * 1.4;          // Initializes a formula to calculate overtime pay
+            double OTP = payRate * 1.5;          // Initializes a formula to calculate overtime pay
             double OTHours = (hoursWorked - 40) * OTP;      // Initializes a formula to calculate overtime hours
             // and the amount of pay
 
