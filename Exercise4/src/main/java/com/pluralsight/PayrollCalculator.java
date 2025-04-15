@@ -1,7 +1,7 @@
 package com.pluralsight;
 import java.util.Scanner;
 
-public class Exercise4 {
+public class PayrollCalculator {
 
     public static void main(String[] args){
 
@@ -9,13 +9,13 @@ public class Exercise4 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("What is your name?"); // Asks User for name
-            String name = scanner.nextLine();
+        String name = scanner.nextLine();
 
         System.out.println("How many hours have you worked?"); // Asks User for how many hours they worked
-            Float hoursWorked = scanner.nextFloat();
+        Float hoursWorked = scanner.nextFloat();
 
         System.out.println("What is your pay rate?"); // Asks User what their pay rate is
-            Float payRate = scanner.nextFloat();
+        Float payRate = scanner.nextFloat();
 
         double grossPay = hoursWorked * payRate; // Initializes a formula to calculate the gross pay
 
