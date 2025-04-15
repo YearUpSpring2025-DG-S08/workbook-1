@@ -2,38 +2,49 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class Main {
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args){
 
         System.out.println("Welcome to PayrollCalculator."); // Introduces the PayrollCalculator
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("What is your name?"); // Asks User for name
-        String name = scanner.nextLine();
+        String name = promptForName(); // variable that calls on the promptForName() method
 
-        System.out.println("How many hours have you worked?"); // Asks User for how many hours they worked
-        Double hoursWorked = scanner.nextDouble();
+        double hoursWorked = hoursWorked(); // variable that calls on the hoursWorked() method
 
-        System.out.println("What is your pay rate?"); // Asks User what their pay rate is
-        Double payRate = scanner.nextDouble();
+        double payRate = payRate(); // variable that calls on the payRate() method
 
-        double grossPay = hoursWorked * payRate; // Initializes a formula to calculate the gross pay
-
-        if (hoursWorked > 40){                   // If statement that will calculate overtime pay
-            double OTP = payRate * 1.5;          // Initializes a formula to calculate overtime pay
-            double OTHours = (hoursWorked - 40) * OTP;      // Initializes a formula to calculate overtime hours
-            // and the amount of pay
+        double grossPay = calcGrossPay(hoursWorked, payRate); // variable that calls on the calcGrossPay() method
+        // inputs parameters of hoursWorked and payRate
 
 
-            System.out.printf("Hello %s, your gross pay is $%.0f and your overtime pay is $%.0f", name, grossPay, OTHours);
-            // Print statement that gives gross pay and the overtime pay
-        }
-        else {
-            System.out.printf("Hello %s, your gross pay is $%.0f", name, grossPay);
-            // Else statement that only prints gross pay if the 'if' statement does not pass true
-        }
-        // System.out.printf("Hello %s, your gross pay is $%.0f", name, grossPay); <-- original print statement
+        System.out.printf("Hello %s, you worked %.0f hours at a rate of $%.0f and made $%.0f", name, hoursWorked, payRate, grossPay);
+    }
 
+    public static String promptForName(){           // class that creates a method that prompts the User to enter their name
+        System.out.println("What is your name?");
+        return scanner.nextLine();
+    }
 
+    public static double hoursWorked(){             // class that creates a method that prompts the User to enter how many hours worked
+        System.out.println("How many hours have you worked?");
+        return scanner.nextDouble();
+    }
+
+    public static double payRate(){                 // class that creates a method that prompts the User to enter their pay rate
+        System.out.println("What is your pay rate?");
+        return scanner.nextDouble();
+    }
+
+    public static double calcGrossPay(double hoursWorked, double payRate) {         // class that creates a method to calculate overtime pay
+//        double grossPay;
+//        if (hoursWorked > 40) {
+//            return grossPay = (40 * payRate) + ((hoursWorked - 40) * payRate * 1.5);
+//        } else {
+//           return grossPay = hoursWorked * payRate;
+//        }
+
+        return (hoursWorked > 40) ? (40 * payRate) + ((hoursWorked - 40) * payRate * 1.5) : hoursWorked * payRate;
+        // formatted code that uses conditional statement to calculate overtime pay
     }
 }
