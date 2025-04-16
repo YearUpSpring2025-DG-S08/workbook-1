@@ -29,10 +29,10 @@ public class Main {
         if (loaded.equalsIgnoreCase("y")){ // if statement checking if User input equals to 'y' - ignoring case sensitivity
             if (choice == 1){ // nested if statement to check if User input for sandwich equals to 1
                 regPrice = regLoaded + regPrice; // variable initializing new value for regPrice after loaded upcharge
-                System.out.printf("Your loaded sandwich price is: $%.3f", regPrice); // print statement showing the new price
+                System.out.printf("Your loaded sandwich price is: $%.3f \n", regPrice); // print statement showing the new price
             } else if (choice == 2){ // else if statement checking if User input for sandwich equals to 2
                 largePrice = largeLoaded + largePrice; // variable initializing new value for largePrice after loaded upcharge
-                System.out.printf("Your loaded sandwich price is: $%.3f", largePrice); // print statement showing the new price
+                System.out.printf("Your loaded sandwich price is: $%.3f \n", largePrice); // print statement showing the new price
             }
         }
 
