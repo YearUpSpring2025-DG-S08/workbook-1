@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/BasicCalculator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BasicCalculator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MathApplication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MathApplication/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PayrollCalculator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PayrollCalculator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SandwichShop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SandwichShop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wb1-demo1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wb1-demo1/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
